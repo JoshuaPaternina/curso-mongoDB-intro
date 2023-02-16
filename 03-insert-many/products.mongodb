@@ -4,25 +4,25 @@ db.products.drop()
 
 db.products.insertMany([
     {
-    _id:3,
-    name: "Product3",
+    _id:1,
+    name: "Product1",
     price: 1000
 
 },
 {
-    _id:4,
-    name: "Product4",
+    _id:2,
+    name: "Product2",
     price: 10000
 
 },
 {
-    _id:5,
-    name: "Product5",
+    _id:3,
+    name: "Product3",
     price: 100000
 }
 ], {
     ordered: false
-    
+    //El ordered lo utlizamos para que siga insetando sin importar si falla
 }
 )
-db.products.find().comment("El ordered lo utlizamos para que siga insetando sin importar si falla")
+db.products.find()
