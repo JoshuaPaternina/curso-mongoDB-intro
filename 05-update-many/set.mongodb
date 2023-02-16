@@ -1,0 +1,37 @@
+use("sample_training")
+db.zips.updateMany(
+    {
+        city: "CLEVELAND"
+    },
+    //Actualización en masa 
+    {
+        $set: {
+            miatributo: "si funciona"
+        }
+    }
+)
+// Rename cambia el atributo
+//db.zips.updateMany(
+//    {
+//        city: "CLEVELAND"
+//    },
+    //Actualización en masa 
+//    {
+//        $rename: {
+//            miatributo: "MiAtributo"
+//        }
+//    }
+//)
+
+// unset elimina un atributo
+//db.zips.updateMany(
+//    {
+//        city: "CLEVELAND"
+//    },
+    //Actualización en masa 
+//    {
+//        $unset: {
+//            MiAtributo: ""
+//        }
+//    }
+//)
