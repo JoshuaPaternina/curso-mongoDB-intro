@@ -1,0 +1,8 @@
+use("platzi_store")
+db.inventory.update({_id:4},{
+    //agrega elementos al final de un array
+    $push: {
+        tags: "headphone"
+    }
+}
+)
