@@ -1,0 +1,16 @@
+use("sample_training")
+// db.trips.find({
+//     $expr:{
+//         $eq: ["$start station in","$end station in"]
+//     }
+
+// }).count()
+db.trips.find({
+    $expr:{
+        $and: [
+            { $eq: ["$start station in","$end station in"]},
+            { $gte: ["$tripduration", 1200]}
+        ]
+    }
+
+}).count()
