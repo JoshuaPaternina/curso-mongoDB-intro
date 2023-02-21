@@ -1,0 +1,17 @@
+use("platzi_store")
+
+//$in, valores & arrays
+//db.inventory.find({qty: { $in: [20, 25]}})
+//db.inventory.find({tags: { $in: ["book","electronics"]}})
+
+
+//$nin, valores & arrays
+//db.inventory.find({qty: { $nin: [20, 25]}})
+//db.inventory.find({tags: { $in: ["book","electronics"]}})
+
+//Operadores solo para Arrays
+//$all --> funciona como un operador AND
+//db.inventory.find({tags: {$all: ["book", "school"]} })
+
+//$size --> que el tamaño de un array sea del valor deseado
+db.inventory.find({tags: {$size: 2} })
