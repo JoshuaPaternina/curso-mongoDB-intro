@@ -1,0 +1,15 @@
+use("platzi_store")
+//db.inventory.find({"item.description": " Single line description"})
+//db.inventory.find({"item.description": {$regex: /line/}})
+
+//  La i despues del / indica que no tenga en cuenta mayusculas o minusculas
+//db.inventory.find({"item.description": {$regex: /LINE/i}})
+
+//  $ indica que termina en la palabra deseada
+//db.inventory.find({"item.description": {$regex: /line$/}})
+
+//  ^ que la palabra es la primera palabra que comienza
+//db.inventory.find({"item.description": {$regex: /^single/i}})
+
+//  m MultiLine
+db.inventory.find({"item.description": {$regex: /^single/im}})
